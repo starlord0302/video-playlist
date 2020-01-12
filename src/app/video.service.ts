@@ -11,7 +11,7 @@ const API_URL = environment.apiUrl;
 })
 export class VideoService {
 
-  model = '/video';
+  model = '/videos';
   httpOptions = {
     headers: new HttpHeaders({
       'Accept':  'application/json',
