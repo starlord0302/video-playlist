@@ -9,7 +9,7 @@ const API_URL = environment.apiUrl;
 @Injectable({
   providedIn: 'root'
 })
-export class ApiService {
+export class VideoService {
 
   model = '/video';
   httpOptions = {
