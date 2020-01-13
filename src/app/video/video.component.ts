@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Video } from './video';
+import { Observable } from 'rxjs';
+
+import { VideoService } from '../video.service';
 
 @Component({
   selector: 'app-video',
@@ -7,9 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideoComponent implements OnInit {
 
-  constructor() { }
+  videos$: Observable<Video[]>;
+  displayedColumns: string[] = ['id', 'title', 'length', 'description'];
+
+  constructor(private videoService: VideoService) { }
 
   ngOnInit() {
+    this.getVideos();
+  }
+
+  getVideos() {
+    this.videos$ = this.videoService.allVideos();
   }
 
 }
