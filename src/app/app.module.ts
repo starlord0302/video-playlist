@@ -10,12 +10,14 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { VideoFormComponent } from './video/video-form/video-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VideoComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    VideoFormComponent
   ],
   imports: [
     BrowserModule,
