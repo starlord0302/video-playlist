@@ -8,6 +8,7 @@ import { VideoService } from './video.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
 import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { VideoFormComponent } from './video/video-form/video-form.component';
@@ -27,6 +28,7 @@ import { VideoTableComponent } from './video/video-table/video-table.component';
     HttpClientModule,
     MatCardModule,
     MatTableModule,
+    MatButtonModule,
     AppRoutingModule
   ],
   providers: [VideoService],

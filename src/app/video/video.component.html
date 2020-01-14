@@ -3,4 +3,7 @@
   <mat-card-content>
     <app-video-table [dataSource]="videos$ | async"></app-video-table>
   </mat-card-content>
+  <mat-card-actions>
+    <a mat-stroked-button routerLink="/add-video" color="primary">Add Video</a>
+  </mat-card-actions>
 </mat-card>
