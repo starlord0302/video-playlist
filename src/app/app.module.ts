@@ -11,13 +11,15 @@ import { MatTableModule } from '@angular/material/table';
 import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { VideoFormComponent } from './video/video-form/video-form.component';
+import { VideoTableComponent } from './video/video-table/video-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VideoComponent,
     PageNotFoundComponent,
-    VideoFormComponent
+    VideoFormComponent,
+    VideoTableComponent
   ],
   imports: [
     BrowserModule,
