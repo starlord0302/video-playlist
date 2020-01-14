@@ -1,1 +1,28 @@
-<p>video-form works!</p>
+<form [formGroup]="videoForm">
+  <mat-card class="video-form">
+    <mat-card-title>Add video</mat-card-title>
+    <mat-card-content>
+      <div class="form-fields">
+        <mat-form-field>
+          <input matInput placeholder="Title" />
+        </mat-form-field>
+
+        <div class="video-length">
+          <mat-form-field class="input-length">
+            <input type="number" matInput placeholder="minutes" />
+          </mat-form-field>
+          <mat-form-field class="input-length">
+            <input type="number" matInput placeholder="seconds" />
+          </mat-form-field>
+        </div>
+
+        <mat-form-field>
+          <textarea matInput placeholder="Description"></textarea>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-stroked-button type="submit" color="primary">Add</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
