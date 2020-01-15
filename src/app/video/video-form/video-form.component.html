@@ -7,24 +7,36 @@
       <div class="form-fields">
         <mat-form-field>
           <input matInput placeholder="Title" formControlName="title"/>
+          <mat-error *ngIf="videoForm.controls['title'] && videoForm.controls['title'].hasError('pattern')">
+            It should start with a capital letter!
+          </mat-error>
         </mat-form-field>
 
         <div class="video-length">
           <mat-form-field class="input-length">
             <input type="number" matInput placeholder="minutes" formControlName="minutes"/>
+            <mat-error *ngIf="videoForm.controls['minutes'] && videoForm.controls['minutes'].hasError('minuteLimit')">
+              It should be between 0 and 60!
+            </mat-error>
           </mat-form-field>
           <mat-form-field class="input-length">
             <input type="number" matInput placeholder="seconds" formControlName="seconds"/>
+            <mat-error *ngIf="videoForm.controls['seconds'] && videoForm.controls['seconds'].hasError('minuteLimit')">
+              It should be between 0 and 60!
+            </mat-error>
           </mat-form-field>
         </div>
 
         <mat-form-field>
           <textarea matInput placeholder="Description" formControlName="description"></textarea>
+          <mat-error *ngIf="videoForm.controls['description'] && videoForm.controls['description'].hasError('maxlength')">
+            Max 100 characters!
+          </mat-error>
         </mat-form-field>
       </div>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-stroked-button type="submit" color="primary">Add</button>
+      <button mat-stroked-button type="submit" [disabled]="!videoForm.valid" color="primary">Add</button>
     </mat-card-actions>
   </mat-card>
 </form>

@@ -1,8 +1,9 @@
 import { Component, OnInit } from "@angular/core";
-import { FormBuilder, FormGroup } from "@angular/forms";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { VideoService } from "src/app/video.service";
 import { Video } from "../video";
 import { Router } from "@angular/router";
+import { CustomValidator } from './custom-validator';
 
 @Component({
   selector: "app-video-form",
@@ -11,10 +12,10 @@ import { Router } from "@angular/router";
 })
 export class VideoFormComponent implements OnInit {
   videoForm = this.formBuilder.group({
-    title: [""],
-    minutes: [""],
-    seconds: [""],
-    description: [""]
+    title: ["", Validators.compose([Validators.required,Validators.pattern('^[A-Z][a-zA-Z ]*')])],
+    minutes: ["", Validators.compose([Validators.required,CustomValidator.timeValidator(0,60)])],
+    seconds: ["", Validators.compose([Validators.required,CustomValidator.timeValidator(0,60)])],
+    description: ["", Validators.maxLength(100)]
   });
 
   constructor(
