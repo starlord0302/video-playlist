@@ -1,23 +1,25 @@
-<form [formGroup]="videoForm">
+<form [formGroup]="videoForm" (ngSubmit)="saveVideo()">
   <mat-card class="video-form">
-    <mat-card-title>Add video</mat-card-title>
+    <mat-card-header>
+      <mat-card-title>Add video</mat-card-title>
+    </mat-card-header>
     <mat-card-content>
       <div class="form-fields">
         <mat-form-field>
-          <input matInput placeholder="Title" />
+          <input matInput placeholder="Title" formControlName="title"/>
         </mat-form-field>
 
         <div class="video-length">
           <mat-form-field class="input-length">
-            <input type="number" matInput placeholder="minutes" />
+            <input type="number" matInput placeholder="minutes" formControlName="minutes"/>
           </mat-form-field>
           <mat-form-field class="input-length">
-            <input type="number" matInput placeholder="seconds" />
+            <input type="number" matInput placeholder="seconds" formControlName="seconds"/>
           </mat-form-field>
         </div>
 
         <mat-form-field>
-          <textarea matInput placeholder="Description"></textarea>
+          <textarea matInput placeholder="Description" formControlName="description"></textarea>
         </mat-form-field>
       </div>
     </mat-card-content>
