@@ -1,7 +1,9 @@
 <mat-card>
-  <mat-card-header>Videos</mat-card-header>
+  <mat-card-header>
+    <mat-card-title>Available Videos</mat-card-title> 
+  </mat-card-header>
   <mat-card-content>
-    <app-video-table [dataSource]="videos$ | async"></app-video-table>
+    <app-video-table [videos]="videos$ | async"></app-video-table>
   </mat-card-content>
   <mat-card-actions>
     <a mat-stroked-button routerLink="/add-video" color="primary">Add Video</a>
