@@ -1,7 +1,8 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { Component, EventEmitter, OnInit, Input, OnChanges, Output } from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import { Video } from '../video';
 import { MatTableDataSource } from '@angular/material/table';
+import { PlaylistService } from 'src/app/api/playlist.service';
 
 @Component({
   selector: 'app-video-table',
@@ -19,6 +20,7 @@ export class VideoTableComponent implements OnChanges{
 
   displayedColumns: string[] = ['title', 'length'];
   @Input() videos: Video[];
+  @Output() selected = new EventEmitter();
   dataSource = new MatTableDataSource([]);
   expandedElement: Video | null;
 

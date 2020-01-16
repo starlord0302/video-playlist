@@ -13,11 +13,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatListModule } from '@angular/material/list';
 import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TitleTakenDialog, VideoFormComponent } from './video/video-form/video-form.component';
 import { VideoTableComponent } from './video/video-table/video-table.component';
 import { PlaylistComponent } from './playlist/playlist.component';
+import { PlaylistService } from './api/playlist.service';
 
 @NgModule({
   declarations: [
@@ -40,10 +42,11 @@ import { PlaylistComponent } from './playlist/playlist.component';
     MatFormFieldModule,
     MatInputModule,
     MatDialogModule,
+    MatListModule,
     AppRoutingModule
   ],
   entryComponents: [TitleTakenDialog],
-  providers: [VideoService],
+  providers: [VideoService, PlaylistService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

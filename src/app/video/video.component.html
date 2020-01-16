@@ -3,9 +3,11 @@
     <mat-card-title>Available Videos</mat-card-title> 
   </mat-card-header>
   <mat-card-content>
-    <app-video-table [videos]="videos$ | async"></app-video-table>
+    <app-video-table [videos]="videos$ | async" (selected)="selectVideo($event)"></app-video-table>
+  <div class="selected" *ngIf="selectedVideo">Selected video: {{ selectedVideo.title }}</div>
   </mat-card-content>
   <mat-card-actions>
-    <a mat-stroked-button routerLink="/add-video" color="primary">Add Video</a>
+    <button mat-flat-button color="primary" (click)="addToPlaylist()">Add to playlist</button>
+    <a mat-stroked-button routerLink="/add-video" color="primary">New Video</a>
   </mat-card-actions>
 </mat-card>
