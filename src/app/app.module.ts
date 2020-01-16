@@ -12,9 +12,10 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
 import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { VideoFormComponent } from './video/video-form/video-form.component';
+import { TitleTakenDialog, VideoFormComponent } from './video/video-form/video-form.component';
 import { VideoTableComponent } from './video/video-table/video-table.component';
 
 @NgModule({
@@ -23,7 +24,8 @@ import { VideoTableComponent } from './video/video-table/video-table.component';
     VideoComponent,
     PageNotFoundComponent,
     VideoFormComponent,
-    VideoTableComponent
+    VideoTableComponent,
+    TitleTakenDialog
   ],
   imports: [
     BrowserModule,
@@ -35,8 +37,10 @@ import { VideoTableComponent } from './video/video-table/video-table.component';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDialogModule,
     AppRoutingModule
   ],
+  entryComponents: [TitleTakenDialog],
   providers: [VideoService],
   bootstrap: [AppComponent]
 })
