@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { VideoService } from "src/app/video.service";
+import { VideoService } from "src/app/api/video.service";
 import { Video } from "../video";
 import { Router } from "@angular/router";
 import { CustomValidator } from './custom-validator';

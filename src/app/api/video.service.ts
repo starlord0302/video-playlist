@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 import { environment } from "src/environments/environment";
-import { Video } from "./video/video";
+import { Video } from "../video/video";
 import { FormGroup } from "@angular/forms";
 
 const API_URL = environment.apiUrl;

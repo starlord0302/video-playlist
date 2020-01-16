@@ -2,26 +2,52 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.12.
 
-## Development server
+## Prerequisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Node.js 10+
+- Yarn 1.19+
+- Source code editor, e.g. `VS Code`
 
-## Code scaffolding
+## Project setup
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Clone this repository.
 
-## Build
+### Install dependencies
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```bash
+yarn install
+```
 
-## Running unit tests
+### Start the application
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+yarn start
+```
 
-## Running end-to-end tests
+## Project structure
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Folders
 
-## Further help
+- `src/`
+  - `app/`
+    - `api/`
+    - `video/`
+  - `environments/`
+  - `assets/`
+- `e2e/`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+#### `src/`
+
+It consist all the code that is part of the application.
+
+#### `src/app/api`
+
+It consist all the code related to HTTP requests to the back-end.
+
+#### `src/app/video`
+
+It consist all the code for the components.
+
+#### `src/environments`
+
+It consist environment dependent configuration.
