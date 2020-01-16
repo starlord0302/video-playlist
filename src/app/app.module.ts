@@ -17,6 +17,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TitleTakenDialog, VideoFormComponent } from './video/video-form/video-form.component';
 import { VideoTableComponent } from './video/video-table/video-table.component';
+import { PlaylistComponent } from './playlist/playlist.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { VideoTableComponent } from './video/video-table/video-table.component';
     PageNotFoundComponent,
     VideoFormComponent,
     VideoTableComponent,
-    TitleTakenDialog
+    TitleTakenDialog,
+    PlaylistComponent
   ],
   imports: [
     BrowserModule,
